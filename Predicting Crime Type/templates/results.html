@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2; /* Background color */
+            display: flex;
+            justify-content: center;
+           
+            height: 100vh; /* Make the body take full height of the viewport */
+            margin: 0;
+        }
+
+        .container {
+            background-color: #fff; /* Background color for the container */
+            padding: 100px;
+            border-radius: 25px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adding shadow to the container */
+            text-align: center; /* Center align the content */
+        }
+
+        h1 {
+            color: #333; /* Color for the heading */
+        }
+
+        p {
+            margin-top: 50px; /* Add spacing between heading and paragraph */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Prediction Result</h1>
+        <p>The predicted crime Type is: {{ predictions }}</p>
+    </div>
+</body>
+</html>

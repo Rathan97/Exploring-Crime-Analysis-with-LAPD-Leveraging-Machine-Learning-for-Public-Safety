@@ -1,0 +1,233 @@
+<html>
+<head>
+    <style>
+        /* Add your CSS styles here */
+    </style>
+</head>
+<body>
+    <h1>Finding Sevrity of the Crime</h1>
+   <form action="{{ url_for('predict')}}" method="POST">
+
+               
+        <label for="victimAge">Victim Age:</label>
+        <input type="text" id="victimAge" name="victimAge"><br><br>
+        
+       <label>Select Victim Sex:</label><br>
+        <input type="radio" id="male" name="victimSex" value="3">
+        <label for="male">Male</label><br>
+        
+        <input type="radio" id="female" name="victimSex" value="1">
+        <label for="female">Female</label><br>
+        
+        <input type="radio" id="unknown" name="victimSex" value="4">
+        <label for="unknown">Unknown</label><br>
+        
+        <br>
+        
+          <label>Select Victim Descent:</label><br>
+        <input type="radio" id="otherAsian" name="victimDescent" value="1">
+        <label for="otherAsian">Other Asian</label><br>
+        
+        <input type="radio" id="black" name="victimDescent" value="2">
+        <label for="black">Black</label><br>
+        
+        <input type="radio" id="chinese" name="victimDescent" value="3">
+        <label for="chinese">Chinese</label><br>
+        
+        <input type="radio" id="cambodian" name="victimDescent" value="4">
+        <label for="cambodian">Cambodian</label><br>
+        
+        <input type="radio" id="filipino" name="victimDescent" value="5">
+        <label for="filipino">Filipino</label><br>
+        
+        <input type="radio" id="guamanian" name="victimDescent" value="6">
+        <label for="guamanian">Guamanian</label><br>
+        
+        <input type="radio" id="hispanic" name="victimDescent" value="7">
+        <label for="hispanic">Hispanic/Latin/Mexican</label><br>
+        
+        <input type="radio" id="americanIndian" name="victimDescent" value="8">
+        <label for="americanIndian">American Indian/Alaskan Native</label><br>
+        
+        <input type="radio" id="japanese" name="victimDescent" value="9">
+        <label for="japanese">Japanese</label><br>
+        
+        <input type="radio" id="korean" name="victimDescent" value="10">
+        <label for="korean">Korean</label><br>
+        
+        <input type="radio" id="laotian" name="victimDescent" value="11">
+        <label for="laotian">Laotian</label><br>
+        
+        <input type="radio" id="other" name="victimDescent" value="12">
+        <label for="other">Other</label><br>
+        
+        <input type="radio" id="pacificIslander" name="victimDescent" value="13">
+        <label for="pacificIslander">Pacific Islander</label><br>
+        
+        <input type="radio" id="samoan" name="victimDescent" value="14">
+        <label for="samoan">Samoan</label><br>
+        
+        <input type="radio" id="hawaiian" name="victimDescent" value="15">
+        <label for="hawaiian">Hawaiian</label><br>
+        
+        <input type="radio" id="vietnamese" name="victimDescent" value="16">
+        <label for="vietnamese">Vietnamese</label><br>
+        
+        <input type="radio" id="white" name="victimDescent" value="17">
+        <label for="white">White</label><br>
+        
+        <input type="radio" id="unknown" name="victimDescent" value="18">
+        <label for="unknown">Unknown</label><br>
+        
+        <input type="radio" id="asianIndian" name="victimDescent" value="19">
+        <label for="asianIndian">Asian Indian</label><br><br>
+
+ <label>Select an Area:</label><br>
+        <input type="radio" id="wilshire" name="areaName" value="7">
+        <label for="wilshire">Wilshire</label><br>
+        
+        <input type="radio" id="central" name="areaName" value="1">
+        <label for="central">Central</label><br>
+        
+        <input type="radio" id="southwest" name="areaName" value="3">
+        <label for="southwest">Southwest</label><br>
+        
+        <input type="radio" id="vanNuys" name="areaName" value="9">
+        <label for="vanNuys">Van Nuys</label><br>
+        
+        <input type="radio" id="hollywood" name="areaName" value="6">
+        <label for="hollywood">Hollywood</label><br>
+        
+        <input type="radio" id="southeast" name="areaName" value="18">
+        <label for="southeast">Southeast</label><br>
+        
+        <input type="radio" id="newton" name="areaName" value="13">
+        <label for="newton">Newton</label><br>
+        
+        <input type="radio" id="mission" name="areaName" value="19">
+        <label for="mission">Mission</label><br>
+        
+        <input type="radio" id="westValley" name="areaName" value="10">
+        <label for="westValley">West Valley</label><br>
+        
+        <input type="radio" id="rampart" name="areaName" value="2">
+        <label for="rampart">Rampart</label><br>
+        
+        <input type="radio" id="westLA" name="areaName" value="8">
+        <label for="westLA">West LA</label><br>
+        
+        <input type="radio" id="hollenbeck" name="areaName" value="4">
+        <label for="hollenbeck">Hollenbeck</label><br>
+        
+        <input type="radio" id="topanga" name="areaName" value="21">
+        <label for="topanga">Topanga</label><br>
+        
+        <input type="radio" id="northeast" name="areaName" value="11">
+        <label for="northeast">Northeast</label><br>
+        
+        <input type="radio" id="77thStreet" name="areaName" value="12">
+        <label for="77thStreet">77th Street</label><br>
+        
+        <input type="radio" id="pacific" name="areaName" value="14">
+        <label for="pacific">Pacific</label><br>
+        
+        <input type="radio" id="nHollywood" name="areaName" value="15">
+        <label for="nHollywood">N Hollywood</label><br>
+        
+        <input type="radio" id="harbor" name="areaName" value="5">
+        <label for="harbor">Harbor</label><br>
+        
+        <input type="radio" id="foothill" name="areaName" value="16">
+        <label for="foothill">Foothill</label><br>
+        
+        <input type="radio" id="devonshire" name="areaName" value="17">
+        <label for="devonshire">Devonshire</label><br>
+        
+        <input type="radio" id="olympic" name="areaName" value="20">
+        <label for="olympic">Olympic</label><br>
+        
+        <br>
+        
+	<label>Weapon Used Category:</label><br>
+        <input type="radio" id="weaponNotMentioned" name="weaponCategory" value="10">
+        <label for="weaponNotMentioned">Weapon Not Mentioned</label><br>
+        
+        <input type="radio" id="cyber" name="weaponCategory" value="2">
+        <label for="cyber">Cyber</label><br>
+        
+        <input type="radio" id="physicalAttack" name="weaponCategory" value="6">
+        <label for="physicalAttack">Physical Attack</label><br>
+        
+        <input type="radio" id="miscellaneousMixed" name="weaponCategory" value="5">
+        <label for="miscellaneousMixed">Miscellaneous/Mixed</label><br>
+        
+        <input type="radio" id="verbalThreat" name="weaponCategory" value="9">
+        <label for="verbalThreat">Verbal Threat</label><br>
+        
+        <input type="radio" id="guns" name="weaponCategory" value="4">
+        <label for="guns">Guns</label><br>
+        
+        <input type="radio" id="bladeWeapons" name="weaponCategory" value="0">
+        <label for="bladeWeapons">Blade Weapons</label><br>
+        
+        <input type="radio" id="chemicals" name="weaponCategory" value="1">
+        <label for="chemicals">Chemicals</label><br>
+        
+        <input type="radio" id="sharpObjects" name="weaponCategory" value="7">
+        <label for="sharpObjects">Sharp Objects</label><br>
+        
+        <input type="radio" id="throwables" name="weaponCategory" value="8">
+        <label for="throwables">Throwables</label><br>
+        
+        <input type="radio" id="explosives" name="weaponCategory" value="3">
+        <label for="explosives">Explosives</label><br>
+        
+        <br>
+	<label>Select Day of the Week:</label><br>
+        <input type="radio" id="sunday" name="dayOfWeek" value="3">
+        <label for="sunday">Sunday</label><br>
+        
+        <input type="radio" id="saturday" name="dayOfWeek" value="2">
+        <label for="saturday">Saturday</label><br>
+        
+        <input type="radio" id="wednesday" name="dayOfWeek" value="6">
+        <label for="wednesday">Wednesday</label><br>
+        
+        <input type="radio" id="tuesday" name="dayOfWeek" value="5">
+        <label for="tuesday">Tuesday</label><br>
+        
+        <input type="radio" id="monday" name="dayOfWeek" value="1">
+        <label for="monday">Monday</label><br>
+        
+        <input type="radio" id="friday" name="dayOfWeek" value="0">
+        <label for="friday">Friday</label><br>
+        
+        <input type="radio" id="thursday" name="dayOfWeek" value="4">
+        <label for="thursday">Thursday</label><br>
+        
+        <br>
+          <label>Select Season:</label><br>
+        <input type="radio" id="spring" name="season" value="1">
+        <label for="spring">Spring</label><br>
+        
+        <input type="radio" id="winter" name="season" value="3">
+        <label for="winter">Winter</label><br>
+        
+        <input type="radio" id="fall" name="season" value="0">
+        <label for="fall">Fall</label><br>
+        
+        <input type="radio" id="summer" name="season" value="2">
+        <label for="summer">Summer</label><br>
+        
+        <br>
+        <br>
+        
+               
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        // Add your JavaScript code here
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            padding: 20px;
+            margin: 0; /* Remove default margin */
+justify-content: center;
+
+        }
+
+        .prediction-container {
+            background-color: #fff;
+            width: 100%; /* Extend to full width of the page */
+            margin: 0 auto;
+            padding: 40px;
+            border-radius: 25px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+            text-align: center; /* Center align the content */
+            box-sizing: border-box; /* Include padding and border in the width */
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+
+        .prediction-text {
+            font-size: 24px;
+             margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="prediction-container">
+        <h1>Prediction Result</h1>
+        <h2 class="prediction-text">The predicted crime type is: {{ predictions }}</h2>
+    
+    </div>
+</body>
+</html>
